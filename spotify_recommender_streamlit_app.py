@@ -105,13 +105,13 @@ genres_study_indexed_df_path = path+'/pickle_files_for_app/genres_study_indexed_
 # genres_study_indexed_df_temp = bz2.BZ2File(genres_study_indexed_df_path,'rb')
 # genres_study_indexed_df = pd.read_pickle(genres_study_indexed_df_temp)
 # genres_study_indexed_df = pickle.load(open(f'/Users/valentinarizzati/Desktop/GitStuff/Projects/Engineering-Spotify/pickle_files_for_app/genres_study_indexed_df.pkl','rb'))
-genres_study_indexed_df = pd.read_csv(genres_study_indexed_df_path)
+genres_study_indexed_df = pd.read_csv(genres_study_indexed_df_path).set_index('genre_study')
 
 track_features_indexed_df_path = path+'/pickle_files_for_app/track_features_indexed_df.csv'
 # track_features_indexed_df_temp = bz2.BZ2File(track_features_indexed_df_path,'rb')
 # track_features_indexed_df = pd.read_pickle(track_features_indexed_df_temp)
 # track_features_indexed_df = pickle.load(open(f'/Users/valentinarizzati/Desktop/GitStuff/Projects/Engineering-Spotify/pickle_files_for_app/track_features_indexed_df.pkl','rb'))
-track_features_indexed_df = pd.read_csv(track_features_indexed_df_path)
+track_features_indexed_df = pd.read_csv(track_features_indexed_df_path).set_index('id')
 
 track_features_path = path+'/pickle_files_for_app/track_features.csv'
 # track_features_temp = bz2.BZ2File(track_features_path,'rb')
