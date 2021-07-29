@@ -5,6 +5,10 @@ Metis: Engineering <br/>
 
 ---
 
+The app was deployed on Streamlit and is available [here](https://share.streamlit.io/vrizzati/engineering-spotify/main/play_something.py).
+
+---
+
 How to navigate this repo:
 - proposal_spotify.pdf: my initial proposal for an image classification project 
 - mvp_spotify.pdf: mvp presented two days before the final project submission
