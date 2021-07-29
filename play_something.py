@@ -24,7 +24,7 @@ st.write('')
 # path for image
 path = os.path.dirname(__file__)
 spotify_image = path+'/images/spotify_play_something.png'
-st.image(spotify_image) #,width=720)
+st.image(spotify_image)
 
 st.markdown("---")
 
@@ -45,14 +45,10 @@ st.markdown("---")
 # User selects user persona --> Model returns mapped genre
 ## The mapped genre will not be visible to the user
 
-# load pickle genre personas
+# load genre personas
 path = os.path.dirname(__file__)
-genre_personas_path = path+'/pickle_files_for_app/genre_personas.csv' # changed from .bz2
-# genre_personas_temp = bz2.BZ2File(genre_personas_path,'rb')
-# genre_personas = pd.read_pickle(genre_personas_temp)
+genre_personas_path = path+'/pickle_files_for_app/genre_personas.csv'
 genre_personas = pd.read_csv(genre_personas_path)
-
-# genre_personas = pickle.load(open(genre_personas,'rb'))
 
 #-------------------------------------------------------------------------------
 
@@ -100,23 +96,14 @@ if input_persona:
 # Genre from inputed persona --> Model returns top three songs in terms of cosine similarity
 ## These three songs will be visible to the user, who will have to select their favorite one
 
-# load pickle files
+# load files
 genres_study_indexed_df_path = path+'/pickle_files_for_app/genres_study_indexed_df.csv'
-# genres_study_indexed_df_temp = bz2.BZ2File(genres_study_indexed_df_path,'rb')
-# genres_study_indexed_df = pd.read_pickle(genres_study_indexed_df_temp)
-# genres_study_indexed_df = pickle.load(open(f'/Users/valentinarizzati/Desktop/GitStuff/Projects/Engineering-Spotify/pickle_files_for_app/genres_study_indexed_df.pkl','rb'))
 genres_study_indexed_df = pd.read_csv(genres_study_indexed_df_path).set_index('genre_study')
 
 track_features_indexed_df_path = path+'/pickle_files_for_app/track_features_indexed_df.csv'
-# track_features_indexed_df_temp = bz2.BZ2File(track_features_indexed_df_path,'rb')
-# track_features_indexed_df = pd.read_pickle(track_features_indexed_df_temp)
-# track_features_indexed_df = pickle.load(open(f'/Users/valentinarizzati/Desktop/GitStuff/Projects/Engineering-Spotify/pickle_files_for_app/track_features_indexed_df.pkl','rb'))
 track_features_indexed_df = pd.read_csv(track_features_indexed_df_path).set_index('id')
 
 track_features_path = path+'/pickle_files_for_app/track_features.csv'
-# track_features_temp = bz2.BZ2File(track_features_path,'rb')
-# track_features = pd.read_pickle(track_features_temp)
-# track_features = pickle.load(open(f'/Users/valentinarizzati/Desktop/GitStuff/Projects/Engineering-Spotify/pickle_files_for_app/track_features.pkl','rb'))
 track_features = pd.read_csv(track_features_path)
 
 #-------------------------------------------------------------------------------
