@@ -1,7 +1,4 @@
 # PLAY SOMETHING BY SPOTIFY
-Valentina Rizzati <br/>
-July 22, 2021 <br/>
-Metis: Engineering <br/>
 
 ---
 
